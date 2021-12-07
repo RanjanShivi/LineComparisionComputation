@@ -1,4 +1,6 @@
-mport java.util.Scanner;
+import java.util.Scanner;
+import java.lang.Double;
+
 public class LineComparison {
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
@@ -20,10 +22,13 @@ public class LineComparison {
         System.out.println("Length of line-1=" + lengthOfLine1);
         double lengthOfLine2=Length2(x12,x22,y12,y22);
         System.out.println("Length of line 2= " + lengthOfLine2);
-        if(lengthOfLine1==lengthOfLine2)
-            System.out.println("line 1 and line 2 are equal");
+
+        if (Double.compare(lengthOfLine1, lengthOfLine2) == 0)
+            System.out.println("Both lines are equal");
+        else if (Double.compare(lengthOfLine1, lengthOfLine2) < 0)
+            System.out.println("line1 is greater then line 2");
         else
-            System.out.println("line 1 and line 2 are not equal");
+            System.out.println("line 2 is greater then line 1");
 
     }
     public static double Length1(double x1, double x2, double y1, double y2)
