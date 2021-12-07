@@ -1,22 +1,42 @@
-import java.util.Scanner;
-
+mport java.util.Scanner;
 public class LineComparison {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        Scanner sc=new Scanner(System.in);
 
         System.out.println("Enter x and y cordinate for point 1 of line-1 ");
-        double x1 = sc.nextDouble();
-        double y1 = sc.nextDouble();
+        double x11=sc.nextDouble();
+        double y11=sc.nextDouble();
         System.out.println("Enter x and y cordinate for point 2 of line-1 ");
-        double x2 = sc.nextDouble();
-        double y2 = sc.nextDouble();
+        double x21=sc.nextDouble();
+        double y21=sc.nextDouble();
+        System.out.println("Enter x and y cordinate for point 1 of line-1 ");
+        double x12=sc.nextDouble();
+        double y12=sc.nextDouble();
+        System.out.println("Enter x and y cordinate for point 2 of line-1 ");
+        double x22=sc.nextDouble();
+        double y22=sc.nextDouble();
 
-        double lengthOfLine = Length(x1, x2, y1, y2);
-        System.out.println("Length of line=" + lengthOfLine);
+        double lengthOfLine1=Length1(x11,x21,y11,y21);
+        System.out.println("Length of line-1=" + lengthOfLine1);
+        double lengthOfLine2=Length2(x12,x22,y12,y22);
+        System.out.println("Length of line 2= " + lengthOfLine2);
+        if(lengthOfLine1==lengthOfLine2)
+            System.out.println("line 1 and line 2 are equal");
+        else
+            System.out.println("line 1 and line 2 are not equal");
+
     }
-    public static double Length(double x1, double x2, double y1, double y2)
+    public static double Length1(double x1, double x2, double y1, double y2)
     {
         double len=Math.sqrt(((x2-x1)*(x2-x1))+((y2-y1)*(y2-y1)));
         return len;
     }
+    public static double Length2(double x1, double x2, double y1, double y2)
+    {
+        double len=Math.sqrt(((x2-x1)*(x2-x1))+((y2-y1)*(y2-y1)));
+        return len;
+    }
+
+
 }
+
